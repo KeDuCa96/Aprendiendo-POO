@@ -10,17 +10,26 @@ include 'includes/header.php';
 class Producto {
     // Cuerpo de la classe, aquí pdoremos insertar atributos o funciones.
     //* 2. Agregar atributos o variables:
-    public $nombre; //* Esto en POO no se le reconoce como variables sino como atributo o propiedades.
+
+    //! Esto es sintaxis antiguas a php 8.
+/*     public $nombre; //* Esto en POO no se le reconoce como variables sino como atributo o propiedades.
     public $precio;
     public $disponible;
 
     //* Constructor = Una función que se llama automaticamente se instancie la clase:
-                                // Soporta el tipado.
-    public function __construct(string $nombre, int $precio, bool $disponible) //Por acá pasamos los datos. 
+                                //Soporta el tipado.
+    public function __construct(string $nombre, int $precio, bool $disponible) //Por acá pasamos los datos. __construct se le conoce como metodos magicos en php y este es el mas común. En otros lenguajtes el constructor es el mismo nombre de la clase, pero en php es obligatoria esta sintaxis.
     {
-        $this->nombre = $nombre; // this se refiere es al objeto o la instancia que se ha creeado con el nuevo producto. 
+        $this->nombre = $nombre; // this se refiere es al objeto o la instancia que se ha creeado con el nuevo producto y es una sintaxis especial de php. Se le conoce como función flecha.
         $this->precio = $precio;
         $this->disponible = $disponible;
+    } */
+
+    //! Esta es la sintaxis de php 8.
+
+    public function __construct(public string $nombre, public int $precio, public bool $disponible)
+    {
+        
     }
 }
 
