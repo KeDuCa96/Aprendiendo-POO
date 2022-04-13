@@ -35,7 +35,7 @@ class Producto {
 }
 
 
-//* 3. Instanciar
+// 3. Instanciar
 $producto = new Producto('Tablet', 400, true); 
 
 $producto->setNombre('Nuevo nombre');
