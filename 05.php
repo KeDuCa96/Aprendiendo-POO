@@ -5,7 +5,7 @@ use Transporte as GlobalTransporte;
  include 'includes/header.php';
 
 //! PREGUNTA DE TRABAJO: ¿Qué es una clase abstracta?
-//? Classes abstractas: Son aquellas que no se pueden instanciar solo se pueden heredar. NUNCA deben instanciarse.
+//? Classes abstractas: Son aquellas que no se pueden instanciar solo se pueden heredar. NUNCA deben instanciarse. A diferencias de la interfaces estas nos permiten crear metodos protected o protegidos. 
 
 
 //Clase Padre
