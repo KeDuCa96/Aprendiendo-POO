@@ -26,6 +26,7 @@ class Producto {
     public static function ImagenDelProducto() {
         return self::$imagenPlaceHolder;
     }
+
     public static function DatosDelProducto() {
         echo "Obteniendo datos del producto";
     }
@@ -33,6 +34,7 @@ class Producto {
     public function mostrarProducto () : void {
         echo "El producto es: ". $this->nombre ." Y su precio es: ". $this->precio;
     }
+
     public function getNombre() : string {
         return $this->nombre;
     }
@@ -50,7 +52,7 @@ $producto = new Producto('Tablet', 400, true, '');
 //Accedemos directamente sin instanciar. Notese la sintaxis especial.
 echo $producto->ImagenDelProducto();
 
-$producto2 = new Producto('Celular', 350, false, '-');
+$producto2 = new Producto('Celular', 350, false, '1');
 echo $producto2->ImagenDelProducto();
 
 include 'includes/footer.php'; 
