@@ -2,9 +2,10 @@
 declare (strict_types = 1);
 include 'includes/header.php';
 
-// 1.Definir la clase:
 
 //? SEGUNDA PIEDRA ANGULAR = ENCAPSULACIÓN:
+// 1.Definir la clase:
+
 // En POO hay un principio que dice: "Mientras más cerrado es mejor".
 class Producto {
     // 2.Agregar atributos o variables:
@@ -12,9 +13,9 @@ class Producto {
     //* Modificadores de acceso.
     // Public - Se puede acceder y modificar en cualquier lugar, tanto en la clase como en el objeto.
     // Protected - Se puede acceder o modificar unicamente en la clase. 
-    // private - Solo miembos de la misma clase pueden acceder a el. 
+    // private - Solo miembros de la misma clase pueden acceder a el. 
 
-    public function __construct(public string $nombre, public int $precio, public bool $disponible)
+    public function __construct(protected string $nombre, public int $precio, public bool $disponible)
     {
         
     }

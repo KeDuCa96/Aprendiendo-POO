@@ -15,10 +15,10 @@ class Producto {
     public $imagen;
     public static $imagenPlaceHolder = "Imagen.jpg";
 
-    public function __construct(public string $nombre, public int $precio, public bool $disponible, string $imagen)
+    public function __construct(public string $nombre, public int $precio, public bool $disponible, string $imagen) // si colocamos un modificador de acceso eso lo haría obligatorio.
     {
         if($imagen){
-            self::$imagenPlaceHolder = $imagen;
+            self::$imagenPlaceHolder = $imagen; // Metodos estaticos no usan This, usan self.
         }
     }
 
@@ -46,11 +46,11 @@ class Producto {
 //echo Producto::ImagenDelProducto();
 
 // 3. Instanciar
-$producto = new Producto('Tablet', 400, true, '2'); 
+$producto = new Producto('Tablet', 400, true, ''); 
 //Accedemos directamente sin instanciar. Notese la sintaxis especial.
 echo $producto->ImagenDelProducto();
 
-$producto2 = new Producto('Celular', 350, false, '');
+$producto2 = new Producto('Celular', 350, false, '-');
 echo $producto2->ImagenDelProducto();
 
 include 'includes/footer.php'; 
