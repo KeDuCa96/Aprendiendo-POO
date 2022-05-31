@@ -1,0 +1,17 @@
+{
+    "name": "kevin/poo",
+    "description": "Aprendiendo name spaces and autoload",
+    "authors": [
+        {
+            "name": "Kevin Durán"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.2"
+    },
+    "autoload": {
+        "psr-4":{
+            "App\\" : "./Class"
+        }
+    }
+}
